@@ -1,0 +1,134 @@
+#!/bin/bash
+### define resources needed:
+#SBATCH --job-name=lasso
+#SBATCH --output=lasso.out
+#SBATCH --time=12:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=2
+#SBATCH --partition=gpu
+#SBATCH --cpus-per-task=12
+#SBATCH --gpus-per-task=1
+#SBATCH --mem-per-gpu=32G
+source ~/miniconda3/etc/profile.d/conda.sh # intialize conda
+conda activate geneGAN
+OUT_PATH=/d/hpc/projects/FRI/DL/mo6643/
+python lasso.py -mi 0,1
+python lasso.py -mi 2,3
+python lasso.py -mi 4,5
+python lasso.py -mi 6,7
+python lasso.py -mi 8,9
+python lasso.py -mi 10,11
+python lasso.py -mi 12,13
+python lasso.py -mi 14,15
+python lasso.py -mi 16,17
+python lasso.py -mi 18,19
+python lasso.py -mi 20,21
+python lasso.py -mi 22,23
+python lasso.py -mi 24,25
+python lasso.py -mi 26,27
+python lasso.py -mi 28,29
+python lasso.py -mi 30,31
+python lasso.py -mi 32,33
+python lasso.py -mi 34,35
+python lasso.py -mi 36,37
+python lasso.py -mi 38,39
+python lasso.py -mi 40,41
+python lasso.py -mi 42,43
+python lasso.py -mi 44,45
+python lasso.py -mi 46,47
+python lasso.py -mi 48,49
+python lasso.py -mi 50,51
+python lasso.py -mi 52,53
+python lasso.py -mi 54,55
+python lasso.py -mi 56,57
+python lasso.py -mi 58,59
+python lasso.py -mi 60,61
+python lasso.py -mi 62,63
+python lasso.py -mi 64,65
+python lasso.py -mi 66,67
+python lasso.py -mi 68,69
+python lasso.py -mi 70,71
+python lasso.py -mi 72,73
+python lasso.py -mi 74,75
+python lasso.py -mi 76,77
+python lasso.py -mi 78,79
+python lasso.py -mi 80,81
+python lasso.py -mi 82,83
+python lasso.py -mi 84,85
+python lasso.py -mi 86,87
+python lasso.py -mi 88,89
+python lasso.py -mi 90,91
+python lasso.py -mi 92,93
+python lasso.py -mi 94,95
+python lasso.py -mi 96,97
+python lasso.py -mi 98,99
+python lasso.py -mi 100,101
+python lasso.py -mi 102,103
+python lasso.py -mi 104,105
+python lasso.py -mi 106,107
+python lasso.py -mi 108,109
+python lasso.py -mi 110,111
+python lasso.py -mi 112,113
+python lasso.py -mi 114,115
+python lasso.py -mi 116,117
+python lasso.py -mi 118,119
+python lasso.py -mi 120,121
+python lasso.py -mi 122,123
+python lasso.py -mi 124,125
+python lasso.py -mi 126,127
+python lasso.py -mi 128,129
+python lasso.py -mi 130,131
+python lasso.py -mi 132,133
+python lasso.py -mi 134,135
+python lasso.py -mi 136,137
+python lasso.py -mi 138,139
+python lasso.py -mi 140,141
+python lasso.py -mi 142,143
+python lasso.py -mi 144,145
+python lasso.py -mi 146,147
+python lasso.py -mi 148,149
+python lasso.py -mi 150,151
+python lasso.py -mi 152,153
+python lasso.py -mi 154,155
+python lasso.py -mi 156,157
+python lasso.py -mi 158,159
+python lasso.py -mi 160,161
+python lasso.py -mi 162,163
+python lasso.py -mi 164,165
+python lasso.py -mi 166,167
+python lasso.py -mi 168,169
+python lasso.py -mi 170,171
+python lasso.py -mi 172,173
+python lasso.py -mi 174,175
+python lasso.py -mi 176,177
+python lasso.py -mi 178,179
+python lasso.py -mi 180,181
+python lasso.py -mi 182,183
+python lasso.py -mi 184,185
+python lasso.py -mi 186,187
+python lasso.py -mi 188,189
+python lasso.py -mi 190,191
+python lasso.py -mi 192,193
+python lasso.py -mi 194,195
+python lasso.py -mi 196,197
+python lasso.py -mi 198,199
+python lasso.py -mi 200,201
+python lasso.py -mi 202,203
+python lasso.py -mi 204,205
+python lasso.py -mi 206,207
+python lasso.py -mi 208,209
+python lasso.py -mi 210,211
+python lasso.py -mi 212,213
+python lasso.py -mi 214,215
+python lasso.py -mi 216,217
+python lasso.py -mi 218,219
+python lasso.py -mi 220,221
+python lasso.py -mi 222,223
+python lasso.py -mi 224,225
+python lasso.py -mi 226,227
+python lasso.py -mi 228,229
+python lasso.py -mi 230,231
+python lasso.py -mi 232,233
+python lasso.py -mi 234,235
+python lasso.py -mi 236,237
+python lasso.py -mi 238,239
