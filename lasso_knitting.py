@@ -24,7 +24,6 @@ args = parser.parse_args()
 scratch_dir = args.scratch_dir
 # This was used becuase data orginally had to be moved out of temporary scratch
 # So moving doesn't need to be done any more
-print(scratch_dir)
 
 def make_name_dict(afolder):
     name_dict = {}

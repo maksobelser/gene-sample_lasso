@@ -118,8 +118,21 @@ Opazimo, da bo površina, ki jo tvori $\beta_1^2 +\beta_2^2 \leq s$ meja Ridge r
 
 \section*{Vrednost $\lambda$ in $t$}
 
-Vrednost $\lambda$ v enačbi \eqref{eqn4} direktno nastavlja nivo krčenja (ang. shrinkage)
+Vrednost $\lambda$ v enačbi \eqref{eqn4} in $t$ v enačbi \eqref{eqn1} direktno nastavljata nivo krčenja (ang. shrinkage), njuno vrednost nastavimo glede na podatke. Tibshirani je v originalnem članu opisal več metod, kako se lahko lotimo nastavitve parametra, največkrat pa ga nastavimo z nazkrižnim preverjanjem. Tibshirani opiše 3 metode:
 
+\begin{itemize}
+	\item navzkrižno preverjanje,
+	\item generalizirano navzkrižno preverjanje in
+	\item analitična nepristranska cenilka tveganja.
+\end{itemize}
+
+Največkrat se uporabi kar k-kratno navzkrižno preverjanje, saj ne predpostavlja poznane porazdelitve $X$. S to metodo preverimo različne vrednosti parametrov in najoptimalnejšo določimo glede na rezultate, ki jih model dosega. 
+
+Drugo metodo lahko pridobimo iz linearne aproksimacije za LASSO oceno parametrov modela, tretjo pa z Steinovo nepristransko cenilko tveganja. 
+
+\section{Sample in gene LASSO}
+
+Varianti sample in gene LASSO se od originalna ne razlikujeta veliko. Še vedno gre za navadno LASSO regresijo, vendar model nekoliko prilagodimo podatkom genske ekspresije.
 
 
 

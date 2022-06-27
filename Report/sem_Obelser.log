@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.8)  24 JUN 2022 09:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.8)  27 JUN 2022 11:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -437,21 +437,26 @@ Underfull \hbox (badness 1609) in paragraph at lines 99--100
 \OT1/ptm/m/n/10 Zakaj LASSO re-gre-sija dolo[]cene ko-e-fi-ciente nas-tavi na
  []
 
-<fig/geo.png, id=27, 500.62032pt x 316.18124pt>
+<fig/geo.png, id=31, 500.62032pt x 316.18124pt>
 File: fig/geo.png Graphic file (type png)
 <use fig/geo.png>
 Package pdftex.def Info: fig/geo.png  used on input line 103.
 (pdftex.def)             Requested size: 243.91125pt x 154.0521pt.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
+24.
+(C:\Users\makso\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
 [2 <./fig/geo.png>] (sem_Obelser.aux)
 Package rerunfilecheck Info: File `sem_Obelser.out' has not changed.
-(rerunfilecheck)             Checksum: EF2334EAFF9BEA619FF3DB394B02F5D3;409.
+(rerunfilecheck)             Checksum: 400D4443A798AAE1D183729328ABE6BF;563.
  ) 
 Here is how much of TeX's memory you used:
- 11501 strings out of 478614
- 187843 string characters out of 2843123
+ 11528 strings out of 478614
+ 188335 string characters out of 2843123
  505370 words of memory out of 3000000
- 29499 multiletter control sequences out of 15000+600000
- 485264 words of font info for 61 fonts, out of 8000000 for 9000
+ 29521 multiletter control sequences out of 15000+600000
+ 485578 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,11n,77p,719b,380s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/makso/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:
@@ -468,9 +473,9 @@ ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/User
 s/makso/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/User
 s/makso/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Use
 rs/makso/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on sem_Obelser.pdf (2 pages, 194988 bytes).
+Output written on sem_Obelser.pdf (2 pages, 196868 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 12 named destinations out of 1000 (max. 500000)
- 22 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 103 PDF objects out of 1000 (max. 8388607)
+ 13 named destinations out of 1000 (max. 500000)
+ 30 words of extra memory for PDF output out of 10000 (max. 10000000)
 
