@@ -1,0 +1,15 @@
+#!/bin/bash
+### define resources needed:
+#SBATCH --job-name=-gL_knitting
+#SBATCH --output=gL_knitting_GPL96-570.out
+#SBATCH --time=12:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=2
+#SBATCH --partition=gpu
+#SBATCH --cpus-per-task=12
+#SBATCH --gpus-per-task=1
+#SBATCH --mem-per-gpu=32G
+source ~/miniconda3/etc/profile.d/conda.sh # intialize conda
+conda activate geneGAN
+OUT_PATH=/d/hpc/projects/FRI/DL/mo6643/main/out
+python lasso_main_knitting.py -sd /d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL96-570/

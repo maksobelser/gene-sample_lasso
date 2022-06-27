@@ -138,11 +138,15 @@ Meritve genske ekspresije je v zadnjih letih postala popularna in dostopna metod
 
 Tovrstne metode nam omogočijo, da raziskujemo organizme in posamezna tkiva v zelo visoki resoluciji celo na nivoju posameznih celic. Kljub hitremu razvoju, tovrstne metode še vedno ostajajo drage, sploh ko želimo pridobiti podatke na nivoju celotnega  genoma. S pomočjo analize glavnih komponent so raziskovalci ugotovili, da približno 1000 genov povzame okoli 80 \% variabilnosti vseh genov. To skupino genov so tudi našli in s tem se je začel tudi Library of Integrated Network-Based Cellular Signatures (LINCS) program, ki je pokazal, da lahko s pomočjo 978 mejnih (and. landmark) genov dovolj dobro imputiramo izražanje tisočih ostalih genov. S takšno redukcijo meritev pade cena poskusa na 5 \$ na vzorec. 
 
-
-
 \section*{Gene LASSO}
 
-\emph{GeneLASSO} je metoda, ki se veliko uporablja za imputacijo neizmerjenih genov znotraj meritev genske ekspresije. Gre za to, da 
+\emph{GeneLASSO} je metoda, ki se veliko uporablja za imputacijo neizmerjenih genov znotraj meritev genske ekspresije. Gre za to, da naučimo nov LASSO model za vsak gen posebej. Tako dobimo $m$ modelov za $m$ genov, ki jih želimo imputirati. Za to seveda potrebujemo celotna podatkovja, torej meritve vseh genov, ki jih želimo uporabiti za imputacijo (torej genov, ki jih bomo izmerili) in vseh genov, ki jih želimo imuputirati. 
+
+Ko so modeli naučeni, lahko vsak gen imputiramo z modelom, ki mu pripada. Iz napisanega lahko sklepamo, da bodo te modeli zajeli predvsem variabilnost in odvisnosti, ki se nahajajo med posameznimi geni, ne pa teh, ki se nahajajo med posameznimi vzorci. Za tovrstno imputacijo pa potrebujemo pristop, ki ga zajema \emph{sample LASSO}.
+
+\section*{Sample LASSO}
+
+
 
 \end{document}
 

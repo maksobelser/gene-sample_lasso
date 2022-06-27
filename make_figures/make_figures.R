@@ -5,17 +5,17 @@ library(ggplot2)
 library(forcats)
 library(plyr)
 
-s_lasso <- read.table(file = "betas_evals.tsv", sep = '\t', header = TRUE)
+df <- read.table(file = "betas_evals.tsv", sep = '\t', header = TRUE)
 
 grafi = list()
 ime = c("r2", "MAE", "RMSE", "NRMSE", "Spearman cor", "Pearson cor", "Cosine sim")
 k = 1
+
+median_by = by(df$Value, df$Metric, median)
+median_by = rbind(median_by)[1,]
+
 for (i in unique(df$Metric)) {
-  p_meds <- ddply(df[df$Metric == i,], .(name), summarise, med = median(Value))
-  df_max <- ddply(df[df$Metric == i,], .(name), summarise, max = max(Value))
-  p_meds$med = round(p_meds$med, 4)
-  
-  grafi[[k]] = ggplot(data = df[df$Metric == i,], aes(x = fct_reorder(name, Value, median), y = Value)) +
+  grafi[[k]] = ggplot(data = df[df$Metric == i,], aes(x = Metric, y = Value)) +
     geom_violin(aes(fill = fct_reorder(name, Value, median))) + theme_classic() + geom_boxplot(width=0.1) + 
     theme(axis.text.x = element_text(angle = 50, vjust = 1, hjust=1, size = 10),
           legend.key.size = unit(1, 'cm'),
@@ -27,6 +27,7 @@ for (i in unique(df$Metric)) {
   k = k+1
 }
 
+boxplot(df$Value[df$Metric == "cvrmse"])
 grafi
 
 ###############################################################################

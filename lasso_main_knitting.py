@@ -31,15 +31,19 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-sd','--savedir',
-                        default = '../reproduce_results/LASSO-KNN-save/',
+                        default = '/d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL96-570/',
                         type = str,
                         help = 'The base dir where all the specific directories are')
     args = parser.parse_args()
     SaveBaseDir = args.savedir
 
-    data_dir = '../data/'
+    data_dir = '/d/hpc/projects/FRI/DL/mo6643/data/'
 
     Folders = glob.glob(SaveBaseDir + '*')
+    print('----------------------------------')
+    print(SaveBaseDir + '*')
+    print('----------------------------------')
+    print(Folders)
     
     # knit the preds if they are all there (save as a samplexgene array)
     for afolder in Folders:
