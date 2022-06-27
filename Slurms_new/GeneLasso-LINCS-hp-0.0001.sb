@@ -1,0 +1,134 @@
+#!/bin/bash
+### define resources needed:
+#SBATCH --job-name=-GeneLasso-LINCS-hp0.0001
+#SBATCH --output=job-name=-GeneLasso-LINCS-hp-0.0001.out
+#SBATCH --time=12:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=2
+#SBATCH --partition=gpu
+#SBATCH --cpus-per-task=12
+#SBATCH --gpus-per-task=1
+#SBATCH --mem-per-gpu=32G
+source ~/miniconda3/etc/profile.d/conda.sh # intialize conda
+conda activate geneGAN
+OUT_PATH=/d/hpc/projects/FRI/DL/mo6643/main/out
+python lasso_main.py -m GeneLasso -mi 0,1 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 2,3 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 4,5 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 6,7 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 8,9 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 10,11 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 12,13 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 14,15 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 16,17 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 18,19 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 20,21 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 22,23 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 24,25 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 26,27 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 28,29 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 30,31 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 32,33 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 34,35 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 36,37 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 38,39 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 40,41 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 42,43 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 44,45 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 46,47 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 48,49 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 50,51 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 52,53 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 54,55 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 56,57 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 58,59 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 60,61 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 62,63 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 64,65 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 66,67 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 68,69 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 70,71 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 72,73 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 74,75 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 76,77 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 78,79 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 80,81 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 82,83 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 84,85 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 86,87 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 88,89 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 90,91 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 92,93 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 94,95 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 96,97 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 98,99 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 100,101 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 102,103 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 104,105 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 106,107 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 108,109 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 110,111 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 112,113 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 114,115 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 116,117 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 118,119 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 120,121 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 122,123 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 124,125 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 126,127 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 128,129 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 130,131 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 132,133 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 134,135 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 136,137 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 138,139 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 140,141 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 142,143 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 144,145 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 146,147 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 148,149 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 150,151 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 152,153 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 154,155 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 156,157 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 158,159 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 160,161 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 162,163 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 164,165 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 166,167 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 168,169 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 170,171 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 172,173 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 174,175 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 176,177 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 178,179 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 180,181 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 182,183 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 184,185 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 186,187 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 188,189 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 190,191 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 192,193 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 194,195 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 196,197 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 198,199 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 200,201 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 202,203 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 204,205 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 206,207 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 208,209 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 210,211 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 212,213 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 214,215 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 216,217 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 218,219 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 220,221 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 222,223 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 224,225 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 226,227 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 228,229 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 230,231 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 232,233 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 234,235 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 236,237 -gs LINCS -hp 0.0001
+python lasso_main.py -m GeneLasso -mi 238,239 -gs LINCS -hp 0.0001

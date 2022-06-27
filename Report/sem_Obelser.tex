@@ -132,9 +132,17 @@ Drugo metodo lahko pridobimo iz linearne aproksimacije za LASSO oceno parametrov
 
 \section{Sample in gene LASSO}
 
-Varianti sample in gene LASSO se od originalna ne razlikujeta veliko. Še vedno gre za navadno LASSO regresijo, vendar model nekoliko prilagodimo podatkom genske ekspresije.
+Varianti \emph{sample} in \emph{gene} LASSO se od originalna ne razlikujeta veliko. Še vedno gre za navadno LASSO regresijo, vendar model nekoliko prilagodimo podatkom genske ekspresije.
+
+Meritve genske ekspresije je v zadnjih letih postala popularna in dostopna metoda za raziskovanje bioloških sistemov. V zadnjem desetletju smo bili lahko priča hitremu razvoju metod kot so visoko zmogljivo sekvenciranje (ang. high throughput sequencing) tudi na področju RNA sekvenciranja. Razvite so bile metode kot so RNA sekvenciranje posameznih celic (single-cell RNA-seq) in druge.
+
+Tovrstne metode nam omogočijo, da raziskujemo organizme in posamezna tkiva v zelo visoki resoluciji celo na nivoju posameznih celic. Kljub hitremu razvoju, tovrstne metode še vedno ostajajo drage, sploh ko želimo pridobiti podatke na nivoju celotnega  genoma. S pomočjo analize glavnih komponent so raziskovalci ugotovili, da približno 1000 genov povzame okoli 80 \% variabilnosti vseh genov. To skupino genov so tudi našli in s tem se je začel tudi Library of Integrated Network-Based Cellular Signatures (LINCS) program, ki je pokazal, da lahko s pomočjo 978 mejnih (and. landmark) genov dovolj dobro imputiramo izražanje tisočih ostalih genov. S takšno redukcijo meritev pade cena poskusa na 5 \$ na vzorec. 
 
 
+
+\section*{Gene LASSO}
+
+\emph{GeneLASSO} je metoda, ki se veliko uporablja za imputacijo neizmerjenih genov znotraj meritev genske ekspresije. Gre za to, da 
 
 \end{document}
 

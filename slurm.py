@@ -15,8 +15,8 @@ tic = time.time()
 N = 2
 
 # dir to put the slurm files
-os.chdir('G:\\My Drive\\1_Faks\\2_Uporabna statistika Msc\\2. letnik\\Strojno ucenje\\Seminar\\Slurms\\')
-slurm_dir = 'G:\\My Drive\\1_Faks\\2_Uporabna statistika Msc\\2. letnik\\Strojno ucenje\\Seminar\\Slurms\\'
+os.chdir('G:\\My Drive\\1_Faks\\2_Uporabna statistika Msc\\2. letnik\\Strojno ucenje\\gene-sample_lasso\\Slurms\\')
+slurm_dir = 'G:\\My Drive\\1_Faks\\2_Uporabna statistika Msc\\2. letnik\\Strojno ucenje\\gene-sample_lasso\\Slurms_new\\'
 
 
 # get the number of Inds to do
@@ -32,28 +32,33 @@ samps_inds = [str(item) for item in samps_inds]
 ModelInds_list = [','.join(samps_inds[n:n+N]) for n in range(0, len(samps_inds), N)]
 print('The number of jobs to submit is',len(ModelInds_list))
 
-
-mylist = ['#!/bin/bash']
-mylist.append('### define resources needed:')
-mylist.append('#SBATCH --job-name=lasso')
-mylist.append('#SBATCH --output=lasso.out')
-mylist.append('#SBATCH --time=12:00:00')
-mylist.append('#SBATCH --nodes=1')
-mylist.append('#SBATCH --ntasks-per-node=2')
-mylist.append('#SBATCH --partition=gpu')
-mylist.append('#SBATCH --cpus-per-task=12')
-mylist.append('#SBATCH --gpus-per-task=1')
-mylist.append('#SBATCH --mem-per-gpu=32G')
-
-mylist.append('source ~/miniconda3/etc/profile.d/conda.sh # intialize conda')
-mylist.append('conda activate geneGAN')
-mylist.append('OUT_PATH=/d/hpc/projects/FRI/DL/mo6643/')
-
-for idx, aModelInd_set in enumerate(ModelInds_list):
-    mylist.append('python lasso.py -mi %s'%aModelInd_set)
-
-with open(slurm_dir + 'beta_analysis-%s.sb'%idx, 'w') as thefile:
-    for item in mylist:
-        thefile.write("%s\n" % item)
+hyperparamteres = ['0.0001', '0.001', '0.01', '0.1', '1', '10']
+models = ['GeneLasso', 'SampleLasso']
+genesplits = ['GPL96-570','LINCS']
+for hp in hyperparamteres:
+    for genesplit in genesplits:
+        for model in models:
+            mylist = ['#!/bin/bash']
+            mylist.append('### define resources needed:')
+            mylist.append('#SBATCH --job-name=-%s-%s-hp%s'%(model,genesplit, hp))
+            mylist.append('#SBATCH --output=job-name=-%s-%s-hp-%s.out'%(model,genesplit, hp))
+            mylist.append('#SBATCH --time=12:00:00')
+            mylist.append('#SBATCH --nodes=1')
+            mylist.append('#SBATCH --ntasks-per-node=2')
+            mylist.append('#SBATCH --partition=gpu')
+            mylist.append('#SBATCH --cpus-per-task=12')
+            mylist.append('#SBATCH --gpus-per-task=1')
+            mylist.append('#SBATCH --mem-per-gpu=32G')
+            
+            mylist.append('source ~/miniconda3/etc/profile.d/conda.sh # intialize conda')
+            mylist.append('conda activate geneGAN')
+            mylist.append('OUT_PATH=/d/hpc/projects/FRI/DL/mo6643/main/out')
+            
+            for idx, aModelInd_set in enumerate(ModelInds_list):
+                mylist.append('python lasso_main.py -m %s -mi %s -gs %s -hp %s'%(model,aModelInd_set,genesplit, hp))
+            
+            with open(slurm_dir + '%s-%s-hp-%s.sb'%(model,genesplit,hp), 'w') as thefile:
+                for item in mylist:
+                    thefile.write("%s\n" % item)
 
 print('This script took %i minutes to run '%((time.time()-tic)/60))

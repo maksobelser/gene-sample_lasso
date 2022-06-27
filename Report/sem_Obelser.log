@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.8)  27 JUN 2022 11:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.8)  27 JUN 2022 12:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -452,13 +452,13 @@ Package rerunfilecheck Info: File `sem_Obelser.out' has not changed.
 (rerunfilecheck)             Checksum: 400D4443A798AAE1D183729328ABE6BF;563.
  ) 
 Here is how much of TeX's memory you used:
- 11528 strings out of 478614
- 188335 string characters out of 2843123
+ 11532 strings out of 478614
+ 188374 string characters out of 2843123
  505370 words of memory out of 3000000
- 29521 multiletter control sequences out of 15000+600000
- 485578 words of font info for 62 fonts, out of 8000000 for 9000
+ 29522 multiletter control sequences out of 15000+600000
+ 487262 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,11n,77p,719b,380s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,11n,77p,760b,380s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/makso/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:
 /Users/makso/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex1
 0.pfb><C:/Users/makso/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
@@ -472,10 +472,11 @@ Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/makso/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/User
 s/makso/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/User
 s/makso/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Use
-rs/makso/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on sem_Obelser.pdf (2 pages, 196868 bytes).
+rs/makso/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Use
+rs/makso/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on sem_Obelser.pdf (2 pages, 209842 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 13 named destinations out of 1000 (max. 500000)
+ 109 PDF objects out of 1000 (max. 8388607)
+ 14 named destinations out of 1000 (max. 500000)
  30 words of extra memory for PDF output out of 10000 (max. 10000000)
 

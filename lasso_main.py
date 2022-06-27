@@ -16,7 +16,7 @@ import time # tested with python verison 3.7
 
 def load_data(TrnData,TestData,Split,GeneSplit):
     
-    data_dir = '../data/'
+    data_dir = '/d/hpc/projects/FRI/DL/mo6643/data/'
     
     # load dict to store all the data
     data_dict = {}
@@ -128,7 +128,7 @@ if __name__ == "__main__":
                         type = str,
                         help = 'The models to do, comma separated')
     parser.add_argument('-sd','--savedir',
-                        default = '../reproduce_results/LASSO-KNN-save/',
+                        default = '/d/hpc/projects/FRI/DL/mo6643/results/main/',
                         type = str,
                         help = 'The base dir where all the specific directories are')
     args = parser.parse_args()
