@@ -140,13 +140,31 @@ Tovrstne metode nam omogočijo, da raziskujemo organizme in posamezna tkiva v ze
 
 \section*{Gene LASSO}
 
-\emph{GeneLASSO} je metoda, ki se veliko uporablja za imputacijo neizmerjenih genov znotraj meritev genske ekspresije. Gre za to, da naučimo nov LASSO model za vsak gen posebej. Tako dobimo $m$ modelov za $m$ genov, ki jih želimo imputirati. Za to seveda potrebujemo celotna podatkovja, torej meritve vseh genov, ki jih želimo uporabiti za imputacijo (torej genov, ki jih bomo izmerili) in vseh genov, ki jih želimo imuputirati. 
+\emph{GeneLASSO} je metoda, ki se veliko uporablja za imputacijo neizmerjenih genov znotraj meritev genske ekspresije. Gre za to, da naučimo nov LASSO model za vsak gen posebej. Tako dobimo $m$ modelov za $m$ genov, ki jih želimo imputirati. Za to seveda potrebujemo celotna podatkovja, torej meritve vseh genov, ki jih želimo uporabiti za imputacijo (torej genov, ki jih bomo izmerili) in vseh genov, ki jih želimo imputirati. 
 
 Ko so modeli naučeni, lahko vsak gen imputiramo z modelom, ki mu pripada. Iz napisanega lahko sklepamo, da bodo te modeli zajeli predvsem variabilnost in odvisnosti, ki se nahajajo med posameznimi geni, ne pa teh, ki se nahajajo med posameznimi vzorci. Za tovrstno imputacijo pa potrebujemo pristop, ki ga zajema \emph{sample LASSO}.
 
 \section*{Sample LASSO}
 
+\emph{Sample LASSO} pa na regresijski problem pogleda ravno obratno, namesto, da izračunamo koeficiente za posamezne gene, v tem primeru izračunamo koeficiente za posamezni vzorec, pri tem pa za treniranje uporabimo vzorec, ki ga želimo imputirati. Gre za to, da prilagodimo najboljši model z uteženo linearno kombinacijo vseh vzorcev, pri tem pa uporabimo samo izmerjene gene (odzivna spremenljivka so izmerjeni geni vzorca, ki ga želimo imputirati, odvisne spremenljivke pa so posamezni vzorci, pri tem pa uporabimo samo gene, ki so izmerjeni). Pričakujemo, da bo LASSO avtomatsko pripisal večjo težo vzorcem, ki so si med sabo podobni in nastavil na nič tiste, ki se zelo razlikujejo od vzorca, ki ga imputiramo.
 
+Ker smo izračunali koeficiente za posamezne vzorce, lahko za imputacijo enostavno utežimo polno izmerjene vzorce, ki jih imamo na voljo in s tem pridobimo vrednosti, ki jih neizmerjeni geni zavzemajo. S ker to naredimo za vzorce, ki imajo merjene vse gene lahko izračunamo tudi mero napake.
+
+\section{Preizkus metod}
+
+Da preizkusim opisano metodo, sem metodi v omejenem obsegu uporabil na podatkih, ki so prosto dostopni na tem naslovu. Gre za zbirko podatkov, ki je bila originalno uporabljena za ta članek. 
+
+\section*{Podatki}
+
+Podatki so javno dostopni na naslovu: \url{https://zenodo.org/record/3971092#.YqnAbHbP2Uk}. Za preizkus sem uporabil podatke iz RNA mikromrež in imputiral RNA mikromreže. 
+
+Predvsem pogledam scenarij, ko bi za imputacijo uporabili starejše \emph{Affymetrix Human Genome U133A Array} (GPL96) mikromreže in imputirali gene, ki jih trenutno lahko merimo samo z novejšimi, genomskimi \emph{Affymetrix Human Genome U133 Plus 2.0 Array} (t.j. GPL570). Na ta način pridobimo podatke označene kot GPL96-570.
+
+Podatki vsebujejo 11678 genov, ki so izmerjeni v obeh mikromrežah, novejše pa imajo še dodatnih 5277 genov, za katere nimamo informacij pri vseh poskusih izvedenih s pomočjo starejših mikromrež. Na voljo je 108 205 vzorcev, ki so bili pridobljeni iz NCBI GEO kot surove CEL datoteke, ki so jim odšteli ozadje, transformirali kvantile, in povzeli s pomočjo fRMA na podlagi po meri narejene kumulativne porazdelitvene funkcije.
+
+\section*{Analiza}
+
+Vsa koda, ki sem jo uporabil se nahaja na tem naslovu: \url{https://github.com/maksobelser/gene-sample_lasso}. 
 
 \end{document}
 
