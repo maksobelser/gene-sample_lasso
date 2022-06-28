@@ -248,7 +248,9 @@ Nazadnje bom primerjal še najboljša modela na enakih podatkih. Vidimo lahko, d
 	\label{fig:vqvae}
 \end{figure}
 
-Ko pogledamo RMSE na sliki 7 pa vidimo, da modela dajeta zha veliko večino genov zelo pododne napovedi, vendar se \emph{Gene LASSO} veliko bolje odreže pri manjši skupini genov.
+Ko pogledamo RMSE na sliki 7 pa vidimo, da modela dajeta za veliko večino genov zelo podobne napovedi, vendar se \emph{Gene LASSO} veliko bolje odreže pri manjši skupini genov.
+
+\newpage
 
 \begin{figure}[!htb]
 	\centering
@@ -257,9 +259,11 @@ Ko pogledamo RMSE na sliki 7 pa vidimo, da modela dajeta zha veliko večino geno
 	\label{fig:vqvae}
 \end{figure}
 
+Nekoliko več osamelcev najdemo pri večjih vrednostih  \emph{Gene LASSO}, vendar odstopanja niso tako velika. 
+
 \section{Zaključek}
 
-Zaključimo lahko, da sta verziji LASSO regresij \emph{Sample} in \emph{Gene LASSO} uporabni metodi za imputacijo podatkov genskega izražanja, saj je LASSO regresija sama po sebi povsem prilagojena takemu tipu podatkov. Gre za to, da so genski podatki večinoma močno kolerirani, vendar je korelacijska struktura bločna - določne skupine genov so med sabo veliko bolj povezane kot druge. Ko imputiramo podatke, je torej zelo uporabno, da določene gene oz. informacije zatremo in jih za imputacijo ne uporabimo - takih genov, ki ne sodijo v isto metabolno pot recimo. Na ta način LASSO regresija sama od sebe poišče odnose med podatki in jih specifično uporabi za imputacijo genov.
+Zaključimo lahko, da sta verziji LASSO regresij \emph{Sample} in \emph{Gene LASSO} uporabni metodi za imputacijo podatkov genskega izražanja, saj je LASSO regresija sama po sebi povsem prilagojena takemu tipu podatkov. Gre za to, da so genski podatki večinoma močno kolerirani, vendar je korelacijska struktura bločna - določne skupine genov so med sabo veliko bolj povezane kot druge. Ko imputiramo podatke, je torej zelo uporabno, da določene gene oz. informacije zatremo in jih za imputacijo ne uporabimo - takih genov, ki ne sodijo v isto metabolno pot, recimo. Na ta način LASSO regresija sama od sebe poišče odnose med podatki in jih specifično uporabi za imputacijo genov.
 
 \end{document}
 
