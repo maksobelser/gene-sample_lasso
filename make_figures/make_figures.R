@@ -65,5 +65,64 @@ p_meds
 
 
 ###############################################################################
+library(stringr)
+library(ggplot2)
 
-wilcox.test(df3$novi, df3$stari)
+#data import
+
+df = NULL
+k = 1
+for (i in list.files()) {
+  tmp = read.table(i, sep = '\t', header = TRUE)
+  df = rbind(df, tmp)
+}
+
+# gene LASSO
+# all graphs
+
+k = 1
+for (i in unique(df$Metric)) {
+  fig[[k]] = ggplot(data = df[df$Metric == i,], aes(x = fct_reorder(HyperParameter, Value, median), y = Value)) + geom_violin() + theme_minimal() + labs(title = i)
+  k = k + 1
+}
+fig
+
+by(df$Value[df$Metric == "cvrmse"], df$HyperParameter[df$Metric == "cvrmse"], median)
+
+# final graphs
+# cosine similarity
+i = "cosine"
+ggplot(data = df[df$Metric == i,], aes(x = factor(HyperParameter), y = Value, fill = factor(HyperParameter))) + 
+  geom_violin() + theme_minimal() + labs(title = "Podobnost kosinusa")  +  scale_fill_brewer(palette="RdBu")  + 
+  theme(plot.title = element_text(hjust = 0.5), 
+        legend.position = "none") + ylab("Podobnost kosinusa") + xlab("Hiperparameter") + geom_boxplot(width=0.12, fill = "white")
+
+# RMSE
+
+i = "rmse"
+ggplot(data = df[df$Metric == i,], aes(x = factor(HyperParameter), y = Value, fill = factor(HyperParameter))) + 
+  geom_violin() + theme_minimal() + labs(title = "RMSE")  +  scale_fill_brewer(palette="RdBu")  + 
+  theme(plot.title = element_text(hjust = 0.5), 
+        legend.position = "none") + ylab("RMSE") + xlab("Hiperparameter") + geom_boxplot(width=0.12, fill = "white")
+
+################################## best
+
+# cosine
+
+i = "cosine"
+ggplot(data = df[df$Metric == i,], aes(x = factor(Model), y = Value, fill = factor(Model))) + 
+  geom_violin() + theme_minimal() + labs(title = "Podobnost kosinusa")  +  scale_fill_brewer(palette="RdBu")  + 
+  theme(plot.title = element_text(hjust = 0.5), 
+        legend.position = "none") + ylab("Podobnost kosinusa") + xlab("Hiperparameter") + geom_boxplot(width=0.12, fill = "white")
+
+# RMSE
+
+i = "rmse"
+ggplot(data = df[df$Metric == i,], aes(x = factor(Model), y = Value, fill = factor(Model))) + 
+  geom_violin() + theme_minimal() + labs(title = "RMSE")  +  scale_fill_brewer(palette="RdBu")  + 
+  theme(plot.title = element_text(hjust = 0.5), 
+        legend.position = "none") + ylab("RMSE") + xlab("Hiperparameter") + geom_boxplot(width=0.12, fill = "white")
+
+
+
+
