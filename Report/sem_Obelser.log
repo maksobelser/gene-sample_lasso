@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.8)  27 JUN 2022 23:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.8)  28 JUN 2022 03:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -345,41 +345,95 @@ Package csquotes Info: ... configuration file loaded successfully.
 
 (C:\Users\makso\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
 File: csquotes.cfg 
+)) (C:\Users\makso\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2022/05/22 3.75 The Babel package
+\babel@savecnt=\count297
+\U@D=\dimen179
+\l@unhyphenated=\language79
+
+(C:\Users\makso\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count298
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\makso\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\makso\AppData\Local\Programs\MiKTeX\tex/latex/babel-slovenian\slovene
+.ldf
+Language: slovene 2021/02/06 v1.2n Slovene support from the babel system
+Package babel Info: Making " an active character on input line 79.
+))
+(C:\Users\makso\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/sl\babel
+-slovene.tex
+(C:\Users\makso\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/sl\babel
+-slovenian.tex
+Package babel Info: Importing font and identification data for slovene
+(babel)             from babel-sl.ini. Reported on input line 11.
 ))
 Package csquotes Info: Checking for multilingual support...
-Package csquotes Info: ... none found.
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+
+
+Package csquotes Warning: No style for language 'slovene'.
+(csquotes)                Using fallback style on input line 36.
+
+Package csquotes Info: Redefining alias 'default' -> 'fallback'.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 3
-5.
+6.
 (C:\Users\makso\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (C:\Users\makso\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count297
+\l__color_backend_stack_int=\count299
 \l__pdf_internal_box=\box52
-) (sem_Obelser.aux)
+) (sem_Obelser.aux
+
+LaTeX Warning: Label `fig:vqvae' multiply defined.
+
+
+LaTeX Warning: Label `fig:vqvae' multiply defined.
+
+
+LaTeX Warning: Label `fig:vqvae' multiply defined.
+
+
+LaTeX Warning: Label `fig:vqvae' multiply defined.
+
+
+LaTeX Warning: Label `fig:vqvae' multiply defined.
+
+
+LaTeX Warning: Label `fig:vqvae' multiply defined.
+
+)
 \openout1 = `sem_Obelser.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-Package hyperref Info: Link coloring OFF on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+Package hyperref Info: Link coloring OFF on input line 36.
  (sem_Obelser.out) (sem_Obelser.out)
 \@outlinefile=\write3
 \openout3 = `sem_Obelser.out'.
@@ -390,23 +444,31 @@ Package caption Info: End \AtBeginDocument code.
 (C:\Users\makso\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count298
-\scratchdimen=\dimen179
+\scratchcounter=\count300
+\scratchdimen=\dimen180
 \scratchbox=\box53
-\nofMPsegments=\count299
-\nofMParguments=\count300
+\nofMPsegments=\count301
+\nofMParguments=\count302
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count301
-\MPscratchDim=\dimen180
-\MPnumerator=\count302
-\makeMPintoPDFobject=\count303
+\MPscratchCnt=\count303
+\MPscratchDim=\dimen181
+\MPnumerator=\count304
+\makeMPintoPDFobject=\count305
 \everyMPtoPDFconversion=\toks31
 )
 (C:\Users\makso\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(C:\Users\makso\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (C:\Users\makso\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
 fg
@@ -415,52 +477,112 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 \titlearea=\box54
 \actualheight=\skip58
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
-[]\OT1/ptm/m/n/10 Metoda se ve-liko uporablja na po-dro[]cju visoko-
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+[]\OT1/ptm/m/n/10 Metoda se ve-liko upo-ra-blja na po-dro[]cju visoko-
  []
 
 
-Underfull \hbox (badness 1472) in paragraph at lines 51--52
-\OT1/ptm/m/n/10 dimenzionalnih po-datkov, saj re[]suje prob-lem $\OML/cmm/m/it/
-10 n \OMS/cmsy/m/n/10 ^^\ \OML/cmm/m/it/10 p$\OT1/ptm/m/n/10 ,
+Underfull \hbox (badness 1472) in paragraph at lines 52--53
+\OT1/ptm/m/n/10 dimenzionalnih po-dat-kov, saj re[]suje pro-blem $\OML/cmm/m/it
+/10 n \OMS/cmsy/m/n/10 ^^\ \OML/cmm/m/it/10 p$\OT1/ptm/m/n/10 ,
  []
 
 
-LaTeX Warning: Command \c invalid in math mode on input line 67.
+LaTeX Warning: Command \c invalid in math mode on input line 68.
 
 [1{C:/Users/makso/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
 
 
 ]
-Underfull \hbox (badness 1609) in paragraph at lines 99--100
-\OT1/ptm/m/n/10 Zakaj LASSO re-gre-sija dolo[]cene ko-e-fi-ciente nas-tavi na
- []
-
-<fig/geo.png, id=35, 500.62032pt x 316.18124pt>
+<fig/geo.png, id=39, 500.62032pt x 316.18124pt>
 File: fig/geo.png Graphic file (type png)
 <use fig/geo.png>
-Package pdftex.def Info: fig/geo.png  used on input line 103.
+Package pdftex.def Info: fig/geo.png  used on input line 104.
 (pdftex.def)             Requested size: 243.91125pt x 154.0521pt.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-24.
+25.
+
 (C:\Users\makso\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-[2 <./fig/geo.png>] [3
+[2 <./fig/geo.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
-] (sem_Obelser.aux)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
+
+ []
+
+<fig/cosine.png, id=59, 481.8pt x 369.63094pt>
+File: fig/cosine.png Graphic file (type png)
+<use fig/cosine.png>
+Package pdftex.def Info: fig/cosine.png  used on input line 202.
+(pdftex.def)             Requested size: 268.30386pt x 205.84132pt.
+
+Overfull \hbox (24.39261pt too wide) in paragraph at lines 202--203
+ [][] 
+ []
+
+<fig/rmse.png, id=60, 492.33937pt x 412.54124pt>
+File: fig/rmse.png Graphic file (type png)
+<use fig/rmse.png>
+Package pdftex.def Info: fig/rmse.png  used on input line 213.
+(pdftex.def)             Requested size: 243.91125pt x 204.38165pt.
+[3 <./fig/cosine.png>]
+<fig/cosine_sample.png, id=75, 507.39563pt x 453.19313pt>
+File: fig/cosine_sample.png Graphic file (type png)
+<use fig/cosine_sample.png>
+Package pdftex.def Info: fig/cosine_sample.png  used on input line 224.
+(pdftex.def)             Requested size: 268.30386pt x 239.64491pt.
+
+Overfull \hbox (24.39261pt too wide) in paragraph at lines 224--225
+ [][] 
+ []
+
+<fig/rmse_sample.png, id=76, 521.69907pt x 453.94594pt>
+File: fig/rmse_sample.png Graphic file (type png)
+<use fig/rmse_sample.png>
+Package pdftex.def Info: fig/rmse_sample.png  used on input line 235.
+(pdftex.def)             Requested size: 243.91125pt x 212.2325pt.
+<fig/best_cosine.png, id=77, 500.62032pt x 383.93437pt>
+File: fig/best_cosine.png Graphic file (type png)
+<use fig/best_cosine.png>
+Package pdftex.def Info: fig/best_cosine.png  used on input line 246.
+(pdftex.def)             Requested size: 268.30386pt x 205.77486pt.
+
+Overfull \hbox (24.39261pt too wide) in paragraph at lines 246--247
+ [][] 
+ []
+
+<fig/best_rmse.png, id=78, 503.63156pt x 415.5525pt>
+File: fig/best_rmse.png Graphic file (type png)
+<use fig/best_rmse.png>
+Package pdftex.def Info: fig/best_rmse.png  used on input line 255.
+(pdftex.def)             Requested size: 243.91125pt x 201.25104pt.
+
+Underfull \vbox (badness 1824) has occurred while \output is active []
+
+ [4 <./fig/rmse.png> <./fig/cosine_sample.png> <./fig/rmse_sample.png> <./fig/b
+est_cosine.png>] [5
+
+ <./fig/best_rmse.png>] (sem_Obelser.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `sem_Obelser.out' has not changed.
-(rerunfilecheck)             Checksum: 60157CBBF58B8134DA8AE41A7E42E682;681.
+(rerunfilecheck)             Checksum: F7C927AD2676471D019EACF5601BF6AA;774.
  ) 
 Here is how much of TeX's memory you used:
- 11541 strings out of 478614
- 188478 string characters out of 2843123
- 505370 words of memory out of 3000000
- 29526 multiletter control sequences out of 15000+600000
- 488276 words of font info for 66 fonts, out of 8000000 for 9000
+ 12637 strings out of 478614
+ 208947 string characters out of 2843123
+ 540185 words of memory out of 3000000
+ 30573 multiletter control sequences out of 15000+600000
+ 489960 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,11n,77p,764b,380s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,11n,77p,764b,389s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/makso/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:
 /Users/makso/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex1
 0.pfb><C:/Users/makso/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
@@ -476,9 +598,9 @@ s/makso/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/User
 s/makso/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Use
 rs/makso/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Use
 rs/makso/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sem_Obelser.pdf (3 pages, 219110 bytes).
+Output written on sem_Obelser.pdf (5 pages, 268146 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 162 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

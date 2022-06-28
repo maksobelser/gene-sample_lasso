@@ -1,0 +1,13 @@
+----------------------------------
+/d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL/*
+----------------------------------
+['/d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL/M--GeneLasso__H--0.01__Trn--Microarray__Tst--Microarray__S--Val__GS--GPL96-570', '/d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL/M--GeneLasso__H--0.001__Trn--Microarray__Tst--Microarray__S--Val__GS--GPL96-570', '/d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL/M--GeneLasso__H--0.1__Trn--Microarray__Tst--Microarray__S--Val__GS--GPL96-570', '/d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL/M--GeneLasso__H--1.0__Trn--Microarray__Tst--Microarray__S--Val__GS--GPL96-570', '/d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL/M--GeneLasso__H--10.0__Trn--Microarray__Tst--Microarray__S--Val__GS--GPL96-570', '/d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL/M--GeneLasso__H--0.0001__Trn--Microarray__Tst--Microarray__S--Val__GS--GPL96-570']
+Predictions saved for /d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL/M--GeneLasso__H--0.0001__Trn--Microarray__Tst--Microarray__S--Val__GS--GPL96-570
+Preds deleted for /d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL/M--GeneLasso__H--0.0001__Trn--Microarray__Tst--Microarray__S--Val__GS--GPL96-570
+
+The number of beta inds that have yet to be done for /d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL/M--GeneLasso__H--0.01__Trn--Microarray__Tst--Microarray__S--Val__GS--GPL96-570 are 5037
+The number of beta inds that have yet to be done for /d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL/M--GeneLasso__H--0.001__Trn--Microarray__Tst--Microarray__S--Val__GS--GPL96-570 are 5037
+The number of beta inds that have yet to be done for /d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL/M--GeneLasso__H--0.1__Trn--Microarray__Tst--Microarray__S--Val__GS--GPL96-570 are 5037
+The number of beta inds that have yet to be done for /d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL/M--GeneLasso__H--1.0__Trn--Microarray__Tst--Microarray__S--Val__GS--GPL96-570 are 5037
+The number of beta inds that have yet to be done for /d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL/M--GeneLasso__H--10.0__Trn--Microarray__Tst--Microarray__S--Val__GS--GPL96-570 are 5037
+The number of beta inds that have yet to be done for /d/hpc/projects/FRI/DL/mo6643/results/main/GeneLasso_GPL/M--GeneLasso__H--0.0001__Trn--Microarray__Tst--Microarray__S--Val__GS--GPL96-570 are 5037

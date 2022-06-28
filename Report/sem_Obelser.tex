@@ -17,6 +17,7 @@
 \usepackage{multirow}
 \usepackage{csquotes}
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\usepackage[slovene]{babel} 
 
 
 \urlstyle{same}
@@ -164,7 +165,101 @@ Podatki vsebujejo 11678 genov, ki so izmerjeni v obeh mikromrežah, novejše pa 
 
 \section*{Analiza}
 
-Vsa koda, ki sem jo uporabil se nahaja na tem naslovu: \url{https://github.com/maksobelser/gene-sample_lasso}. 
+Vsa koda, ki sem jo uporabil, se nahaja na tem naslovu: \url{https://github.com/maksobelser/gene-sample_lasso}. Za analizo sem uporabil python in programski paket scikit-learn. Vse izračune sem izvedel na Arnes HPC klastru, zato je v repozitoriju tudi kar nekaj sbach in shell skript. Vsi rezultati so prav tako dostopni v surovih vrednostih, zraven so tudi izračunane metrike.
+
+Ker so izračuni vzeli kar nekaj časa sem imuputiral omejeno število genov. Imutiranih je bilo prvih 240 manjkajočih genov v podatkih. 
+
+\section*{Metrike uspešnosti}
+
+Najboljšo vrednost hiperparamtera bom določil s pomočjo root mean squared error (RMSE) in podobnosti kosinusa. RMSE je definiran kot:
+
+\begin{equation}
+	RMSE(g_i) = \sqrt{\dfrac{\sum_{i = 1}^{S}(\hat{g}_{i, j} - g_{i, j})^2}{S}}
+	\label{eqn6} 
+\end{equation}
+
+\ \\
+
+Kjer je $S$ število vzorcev in $g_{i, j}$ izražanje nekega gena $j$ v vzorcu $i$.
+
+Podobnost kosinusa je definirana kot:
+
+\begin{equation}
+	podobnost(g_i) = \dfrac{A \cdot B}{||A||\cdot||B||}
+	\label{eqn7} 
+\end{equation}
+
+\ \\
+
+Podobnost je definirana med -1 in 1, pri tem 1 pomeni vektorja, ki sta si proporcionalna, torej ciljamo vednosti, ki so čim bližje 1 in pri RMSE ćim manjše vrednosti, torej vrednosti, ki so blizu 0.
+
+\section*{Rezultati geneLASSO}
+
+Najprej predstavljam rezultate s podobnostjo kosinusa za model \emph{GeneLASSO}.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=1.1\linewidth]{fig/cosine.png}
+	\caption{Podobnost kosinusa za model \emph{GeneLASSO} prikazane s pomočjo violin garfov in okvirjev z ročaji.}
+	\label{fig:vqvae}
+\end{figure}
+
+Na sliki lahko vidimo, da so vrednosti za posmezne gene najbližje 1 pri vrednosti hiperparamtera 0.001. Vse ostale vrednosti dajo slabše napovedi. 
+
+Na sliki 3 lahko vidimo, da se modeli po meri RMSE razlikujejo veliko manj. Do razlik pride predvsem na repih porazdelitev, kjer opazimo, da modeli dajo boljše napovedi za določene osamelce. Mediane RMSE vrednosti se med sabo ne razlikujejo, tako da se na podlagi grafov podobnosti kosinusa in porazdelitev v repu RMSE za vse vrednosti hiperparamtera odločimo, da je najprimernejša vrednost $0.001$. 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=1\linewidth]{fig/rmse.png}
+	\caption{RMSE za model \emph{GeneLASSO} prikazane s pomočjo violin garfov in okvirjev z ročaji.}
+	\label{fig:vqvae}
+\end{figure}
+
+\section*{Rezultati sampleLASSO}
+
+Pri \emph{sample LASSO} lahko opazimo, da ima model najvišje vrednosti podobnosti kosinusa pri vrednosti hiperparamtera $0.01$. Prav tako lahko podobne rezultate opazimo pri meri RMSE.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=1.1\linewidth]{fig/cosine_sample.png}
+	\caption{Podobnost kosinusa za model \emph{SampleLASSO} prikazane s pomočjo violin garfov in okvirjev z ročaji.}
+	\label{fig:vqvae}
+\end{figure}
+
+Na sliki 5 so prikazane vrednosti RMSE za model \emph{SampleLASSO}.
+
+\newpage
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=1\linewidth]{fig/rmse_sample.png}
+	\caption{RMSE za model \emph{SampleLASSO} prikazane s pomočjo violin garfov in okvirjev z ročaji.}
+	\label{fig:vqvae}
+\end{figure}
+
+\section*{Primerjava modelov}
+
+Nazadnje bom primerjal še najboljša modela na enakih podatkih. Vidimo lahko, da se pri podobnosti kosinusa modela močno razlikujeta, \emph{Gene LASSO} dosega veliko boljše rezultate.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=1.1\linewidth]{fig/best_cosine.png}
+	\caption{Podobnost kosinusa za najboljša modela \emph{SampleLASSO} in \emph{Gene LASSO} prikazane s pomočjo violin garfov in okvirjev z ročaji.}
+	\label{fig:vqvae}
+\end{figure}
+
+Ko pogledamo RMSE na sliki 7 pa vidimo, da modela dajeta zha veliko večino genov zelo pododne napovedi, vendar se \emph{Gene LASSO} veliko bolje odreže pri manjši skupini genov.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=1\linewidth]{fig/best_rmse.png}
+	\caption{RMSE za najboljša modela \emph{SampleLASSO} in \emph{Gene LASSO} prikazane s pomočjo violin garfov in okvirjev z ročaji.}
+	\label{fig:vqvae}
+\end{figure}
+
+\section{Zaključek}
+
+Zaključimo lahko, da sta verziji LASSO regresij \emph{Sample} in \emph{Gene LASSO} uporabni metodi za imputacijo podatkov genskega izražanja, saj je LASSO regresija sama po sebi povsem prilagojena takemu tipu podatkov. Gre za to, da so genski podatki večinoma močno kolerirani, vendar je korelacijska struktura bločna - določne skupine genov so med sabo veliko bolj povezane kot druge. Ko imputiramo podatke, je torej zelo uporabno, da določene gene oz. informacije zatremo in jih za imputacijo ne uporabimo - takih genov, ki ne sodijo v isto metabolno pot recimo. Na ta način LASSO regresija sama od sebe poišče odnose med podatki in jih specifično uporabi za imputacijo genov.
 
 \end{document}
 
